@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Rest
+{
+	@Value("${message}")
+	private String msg;
+	
+	@Value("${id}")
+	private int id;
+	
+	@GetMapping("/sampleurl")
+	
+	public String printString()
+	{
+		return msg;
+	}
+	@GetMapping("/sampleurl")
+	public int printInt()
+	{
+		return id;
+	}
+}
