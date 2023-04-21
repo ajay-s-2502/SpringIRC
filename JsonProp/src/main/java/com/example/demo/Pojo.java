@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Pojo 
 {
-	@JsonIgnore private String name;
+	private String name;
 	private int id;
 	@JsonIgnore private int age;
 	public String getName() {
