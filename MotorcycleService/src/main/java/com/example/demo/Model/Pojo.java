@@ -12,6 +12,7 @@ public class Pojo {
 	private String eng_num;
 	private String chs_num;
 	private int est_cost;
+	private String type_of_serv;
 	public int getJob_card() {
 		return job_card;
 	}
@@ -54,9 +55,11 @@ public class Pojo {
 	public void setEst_cost(int est_cost) {
 		this.est_cost = est_cost;
 	}
-	@Override
-	public String toString() {
-		return "Pojo [job_card=" + job_card + ", c_name=" + c_name + ", v_name=" + v_name + ", reg_num=" + reg_num
-				+ ", eng_num=" + eng_num + ", chs_num=" + chs_num + ", est_cost=" + est_cost + "]";
+	
+	public String getType_of_serv() {
+		return type_of_serv;
+	}
+	public void setType_of_serv(String type_of_serv) {
+		this.type_of_serv = type_of_serv;
 	}
 }
