@@ -1,65 +1,81 @@
 package com.example.demo.Model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "customer_details")
 public class Pojo {
-	@Id private int job_card;
-	private String c_name;
-	private String v_name;
-	private String reg_num;
-	private String eng_num;
-	private String chs_num;
-	private int est_cost;
-	private String type_of_serv;
-	public int getJob_card() {
-		return job_card;
+	@Id private int jobcard;
+	@Column(name = "customer_name") private String cname;
+	@Column(name = "vehicle_name") private String vname;
+	@Column(name = "register_number") private String regnum;
+	@Column(name = "engine_number") private String engnum;
+	@Column(name = "chassis_number") private String chsnum;
+	@Column(name = "type_of_service") private String typeofserv;
+	@Column(name = "problems") private String prob;
+	@Column(name = "estimated_time_hrs") private double esttime;
+	@Column(name = "estimated_cost") private int estcost;
+	public int getJobcard() {
+		return jobcard;
 	}
-	public void setJob_card(int job_card) {
-		this.job_card = job_card;
+	public void setJobcard(int jobcard) {
+		this.jobcard = jobcard;
 	}
-	public String getC_name() {
-		return c_name;
+	public String getCname() {
+		return cname;
 	}
-	public void setC_name(String c_name) {
-		this.c_name = c_name;
+	public void setCname(String cname) {
+		this.cname = cname;
 	}
-	public String getV_name() {
-		return v_name;
+	public String getVname() {
+		return vname;
 	}
-	public void setV_name(String v_name) {
-		this.v_name = v_name;
+	public void setVname(String vname) {
+		this.vname = vname;
 	}
-	public String getReg_num() {
-		return reg_num;
+	public String getRegnum() {
+		return regnum;
 	}
-	public void setReg_num(String reg_num) {
-		this.reg_num = reg_num;
+	public void setRegnum(String regnum) {
+		this.regnum = regnum;
 	}
-	public String getEng_num() {
-		return eng_num;
+	public String getEngnum() {
+		return engnum;
 	}
-	public void setEng_num(String eng_num) {
-		this.eng_num = eng_num;
+	public void setEngnum(String engnum) {
+		this.engnum = engnum;
 	}
-	public String getChs_num() {
-		return chs_num;
+	public String getChsnum() {
+		return chsnum;
 	}
-	public void setChs_num(String chs_num) {
-		this.chs_num = chs_num;
+	public void setChsnum(String chsnum) {
+		this.chsnum = chsnum;
 	}
-	public int getEst_cost() {
-		return est_cost;
+	public String getTypeofserv() {
+		return typeofserv;
 	}
-	public void setEst_cost(int est_cost) {
-		this.est_cost = est_cost;
+	public void setTypeofserv(String typeofserv) {
+		this.typeofserv = typeofserv;
 	}
-	
-	public String getType_of_serv() {
-		return type_of_serv;
+	public String getProb() {
+		return prob;
 	}
-	public void setType_of_serv(String type_of_serv) {
-		this.type_of_serv = type_of_serv;
+	public void setProb(String prob) {
+		this.prob = prob;
+	}
+	public double getEsttime() {
+		return esttime;
+	}
+	public void setEsttime(double esttime) {
+		this.esttime = esttime;
+	}
+	public int getEstcost() {
+		return estcost;
+	}
+	public void setEstcost(int estcost) {
+		this.estcost = estcost;
 	}
 }
