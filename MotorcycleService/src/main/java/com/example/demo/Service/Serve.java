@@ -11,9 +11,10 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.Controller.Control;
 import com.example.demo.Model.Pojo;
+import com.example.demo.Model.PojoLogin;
 import com.example.demo.Repository.Repo;
-import com.example.demo.ValidateModel.PojoLogin;
-import com.example.demo.ValidateRepo.RepoLogin;
+import com.example.demo.Repository.RepoLogin;
+
 
 @Service
 public class Serve {
@@ -32,9 +33,9 @@ public class Serve {
 		return r.findAll();
 	}
 	
-	public Optional<Pojo> getVehicleById(int job_card)
+	public Optional<Pojo> getVehicleByNum(String regnum)
 	{
-		return r.findById(job_card);
+		return r.findById(regnum);
 	}
 	
 	public String updateVehicle(Pojo p)
@@ -43,9 +44,9 @@ public class Serve {
 		return "Updated!";
 	}
 	
-	public String deleteByRequestParamId(int job_card)
+	public String deleteByNum(String regnum)
 	{
-		r.deleteById(job_card);
+		r.deleteById(regnum);
 		return "Deleted!";
 	}
 

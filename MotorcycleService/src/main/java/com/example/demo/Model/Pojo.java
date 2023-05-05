@@ -1,29 +1,32 @@
 package com.example.demo.Model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "customer_details")
+
 public class Pojo {
-	@Id private int jobcard;
+	
 	@Column(name = "customer_name") private String cname;
 	@Column(name = "vehicle_name") private String vname;
-	@Column(name = "register_number") private String regnum;
+	@Id @Column(name = "register_number") private String regnum;
 	@Column(name = "engine_number") private String engnum;
 	@Column(name = "chassis_number") private String chsnum;
 	@Column(name = "type_of_service") private String typeofserv;
 	@Column(name = "problems") private String prob;
 	@Column(name = "estimated_time_hrs") private double esttime;
 	@Column(name = "estimated_cost") private int estcost;
-	public int getJobcard() {
-		return jobcard;
-	}
-	public void setJobcard(int jobcard) {
-		this.jobcard = jobcard;
-	}
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "job_card")
+	private PojoSpares jobcard;
+	
 	public String getCname() {
 		return cname;
 	}
@@ -77,5 +80,11 @@ public class Pojo {
 	}
 	public void setEstcost(int estcost) {
 		this.estcost = estcost;
+	}
+	public PojoSpares getJobcard() {
+		return jobcard;
+	}
+	public void setJobcard(PojoSpares jobcard) {
+		this.jobcard = jobcard;
 	}
 }

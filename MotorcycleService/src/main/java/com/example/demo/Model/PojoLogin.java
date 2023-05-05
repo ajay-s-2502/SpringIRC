@@ -1,4 +1,4 @@
-package com.example.demo.ValidateModel;
+package com.example.demo.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -8,7 +8,8 @@ import jakarta.persistence.Table;
 @Table(name = "admin_credentials")
 public class PojoLogin {
 
-	@Id private String uname;
+	@Id 
+	private String uname;
 	private String pass;
 	public String getUname() {
 		return uname;
