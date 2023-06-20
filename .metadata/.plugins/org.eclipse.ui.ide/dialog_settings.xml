@@ -38,6 +38,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\College\Semester - IV\Software Training\REST API\Motorcycle Service - Bike Doctor\BackEnd-Spring-RESTAPI\MotorcycleService"/>
 			<item value="D:\College\Semester - IV\Software Training\REST API\Education Loan Portal\EducationLoanPortral-RESTAPI"/>
 			<item value="D:\College\Semester - IV\Software Training\REST API\Education Loan Portal\EducationLoanPortral"/>
 			<item value="C:\Users\ajay2\Desktop\spring-boot-data-jpa-mysql-master"/>
